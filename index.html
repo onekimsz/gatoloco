@@ -27,7 +27,7 @@
         }
 
         .bg {
-            background-image: url('bg.jpg'); /* Replace with your image URL */
+            background-image: url('bg.jpg?v=1'); /* Add versioning for cache control */
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -39,6 +39,13 @@
             filter: brightness(60%);
             z-index: -1;
             transition: background-image 1s ease;
+        }
+
+        /* Fallback for browsers that do not support fixed background */
+        @supports not (background-attachment: fixed) {
+            .bg {
+                background-attachment: scroll; /* Fallback for some browsers */
+            }
         }
 
         /* Centered content with text and button */
