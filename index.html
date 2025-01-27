@@ -14,7 +14,7 @@
             box-sizing: border-box;
         }
 
-        /* Fullscreen background with parallax effect */
+        /* Fullscreen background with no delay */
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
@@ -27,7 +27,7 @@
         }
 
         .bg {
-            background-image: url('bg.jpg'); /* Ganti dengan URL gambar yang kamu pilih */
+            background-image: url('bg.jpg'); /* Replace with your image URL */
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -146,17 +146,15 @@
             e.preventDefault(); // Disable right-click
         });
 
+        // Prevent text selection and copying
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault(); // Prevent text selection
+        });
+
         // Redirect after 5 seconds
         setTimeout(function() {
-            document.getElementById('joinBtn').click(); // Click the button to redirect
+            window.location.href = "https://vnanxl.happydatte.com/?utm_source=da57dc555e50572d&&ban=inst&j1=1&s1=226805&s2=2083622&s3=NARUTO&click_id=GATOLOCO";
         }, 5000);
-
-        // Lock the page
-        window.onload = function() {
-            // Disable all interactions except the content div
-            document.body.style.pointerEvents = 'none'; 
-            document.querySelector('.content').style.pointerEvents = 'auto'; 
-        };
     </script>
     
 </body>
