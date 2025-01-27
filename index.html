@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join an exclusive community. Discover amazing opportunities!">
+    <meta name="robots" content="noindex, nofollow"> <!-- Prevent search engines from indexing the page -->
+    <title>Discover the World</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fullscreen background with parallax effect */
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            user-select: none; /* Disable text selection */
+            pointer-events: none; /* Disable interaction with the page */
+            -webkit-user-select: none; /* Disable selection on Webkit-based browsers */
+            -moz-user-select: none; /* Disable selection on Firefox */
+            -ms-user-select: none; /* Disable selection on IE/Edge */
+        }
+
+        .bg {
+            background-image: url('bg.jpg'); /* Ganti dengan URL gambar yang kamu pilih */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: brightness(60%);
+            z-index: -1;
+            transition: background-image 1s ease;
+        }
+
+        /* Centered content with text and button */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            max-width: 600px;
+            pointer-events: auto; /* Enable interaction only for the content */
+        }
+
+        /* Heading style with fade-in effect */
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            margin-bottom: 20px;
+            animation: fadeInUp 1.5s ease-out;
+            white-space: nowrap; /* Ensure text stays on one line */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis if text is too long */
+        }
+
+        /* Subheading style with delay fade-in effect */
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.5s ease-out;
+            animation-delay: 0.5s;
+        }
+
+        /* Button with gradient and hover effect */
+        .cta-button {
+            background: linear-gradient(45deg, #ff6f61, #ff2e63);
+            color: white;
+            font-size: 1.3em;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            display: inline-block;
+        }
+
+        /* Button hover effect */
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ff2e63, #ff6f61);
+        }
+
+        /* Animation for fade-in with upward motion */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media query for smaller devices */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em; /* Adjust size for smaller screens */
+            }
+
+            p {
+                font-size: 1.1em; /* Adjust paragraph size for smaller screens */
+            }
+
+            .cta-button {
+                font-size: 1.1em; /* Adjust button size */
+                padding: 14px 35px; /* Adjust button padding */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div class="bg"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Join Us Today!</h1>
+        <p>Be part of a global community and explore exciting opportunities.</p>
+        <a href="https://vnanxl.happydatte.com/?utm_source=da57dc555e50572d&&ban=inst&j1=1&s1=226805&s2=2083622&s3=NARUTO&click_id=GATOLOCO" class="cta-button" target="_blank" id="joinBtn">Join Now</a>
+    </div>
+
+    <script>
+        // Prevent right-click to copy content
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault(); // Disable right-click
+        });
+
+        // Redirect after 5 seconds
+        setTimeout(function() {
+            document.getElementById('joinBtn').click(); // Click the button to redirect
+        }, 5000);
+
+        // Lock the page
+        window.onload = function() {
+            // Disable all interactions except the content div
+            document.body.style.pointerEvents = 'none'; 
+            document.querySelector('.content').style.pointerEvents = 'auto'; 
+        };
+    </script>
+    
+</body>
+</html>
